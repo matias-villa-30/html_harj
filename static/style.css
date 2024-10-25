@@ -4,17 +4,54 @@ html {
 }
 
 body {
-    margin:0;
+  /*  saca estilos por defecto  */
+  margin: 0;
+  font-family: Avenir;
 }
 
-header {
-    background-color: dimgray;
-    margin:0;
-    border: 1px black solid;
-
-
+.header {
+  display: flex;
+  /*
+  rem es una unidad de medida relativa
+  al fontsize del elemento raiz (html),
+  pero podes usar los pixeles que precises.
+  */
+  height: 4rem;
+  background-color: dimgray;
+  /*  Espacio a los costados, hay mejores formas
+  de hacer esto */
+  padding: 0 10%;
+  align-items: center;
 }
 
+.header__icon {
+  max-height: 4rem;
+}
+
+/* el naming viene de BEM
+https://getbem.com/naming/
+Block Element Modifier
+block__element--modifier
+ */
+.header__left {
+  /*  esto solo funciona en flex elements.  */
+  margin-right: auto;
+}
+
+.header__right {
+  margin-left: auto;
+}
+
+.header__nav {
+  display: flex;
+  list-style: none;
+  align-items: center
+}
+
+/* los selectores css estan demas, este selecciona cualquier header__nav__item que este a la derecha de otr nav__item. Por eso todos tienen un margen. Por eso si inspeccionas home no tiene nada. */
+.header__nav__item + .header__nav__item {
+  margin-left: 6rem;
+}
 ul {
     display: flex;
     list-style-type: none;
@@ -31,7 +68,7 @@ li a {
     font-family: 'Lucida Grande', Arial, sans-serif;
     width: 5rem;
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
 
 }
@@ -39,19 +76,20 @@ li a {
 li a:hover {
     color:darkcyan;
     font-family: 'Lucida Grande', Arial, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
 }
 
 .titulo {
     text-align: center;
+    padding-right: 25rem;
 }
 
 .center {
      display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 8px 8px;
 
     height: auto;
 }
@@ -84,4 +122,23 @@ li a:hover {
 
 h1 {
     margin-left: 20rem;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    flex: 200px;
+
+
+    margin-left: 2rem;
+}
+
+article {
+  flex: 1;
+}
+
+img {
+    border-radius: 8px 8px 8px 8px;
 }
