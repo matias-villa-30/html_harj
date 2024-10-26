@@ -131,14 +131,49 @@ section {
     flex-flow: row wrap;
     flex: 200px;
 
-
+    
     margin-left: 2rem;
 }
 
 article {
   flex: 1;
+
 }
 
 img {
     border-radius: 8px 8px 8px 8px;
+    padding-left: 3rem;
+}
+
+.content {
+  padding: 2rem 10%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: dimgray;
+  height: 520px;
+}
+
+h2 {
+    padding-left: 3rem;
+}
+
+p {
+    padding-left: 3rem;
+}
+
+i {
+  padding-left: 3rem;
+}
+.titulo2 {
+    padding-left: 3rem;
 }
