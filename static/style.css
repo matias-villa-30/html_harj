@@ -1,11 +1,13 @@
 html {
     font-family: Verdana;
     background-color: azure;
+    scroll-behavior: smooth;
 }
 
 body {
   /*  saca estilos por defecto  */
   margin: 0;
+    align-content: center;
   font-family: Avenir;
 }
 
@@ -20,12 +22,16 @@ body {
   background-color: dimgray;
   /*  Espacio a los costados, hay mejores formas
   de hacer esto */
-  padding: 0 10%;
+  padding: 0 3%;
   align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 .header__icon {
   max-height: 4rem;
+    position: sticky;
+    top: 0;
 }
 
 /* el naming viene de BEM
@@ -36,21 +42,31 @@ block__element--modifier
 .header__left {
   /*  esto solo funciona en flex elements.  */
   margin-right: auto;
+    padding-left: 14rem;
+    position: sticky;
+    top: 0;
 }
 
 .header__right {
   margin-left: auto;
+    position: sticky;
+    top: 0;
 }
 
 .header__nav {
   display: flex;
   list-style: none;
-  align-items: center
+  align-items: center;
+    position: sticky;
+    top: 0;
+    padding-right: 14rem;
 }
 
 /* los selectores css estan demas, este selecciona cualquier header__nav__item que este a la derecha de otr nav__item. Por eso todos tienen un margen. Por eso si inspeccionas home no tiene nada. */
 .header__nav__item + .header__nav__item {
   margin-left: 6rem;
+    position: sticky;
+    top: 0;
 }
 ul {
     display: flex;
@@ -95,10 +111,11 @@ li a:hover {
 }
 
 .texto {
-  max-width: 600px;
+  max-width: 959px;
   margin: 0 auto;
   word-wrap: break-word;
   line-height: 1.5em;
+    padding-left: 1rem;
   white-space: normal;
   text-align: center;
     color: darkred;
@@ -111,13 +128,15 @@ li a:hover {
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
-    margin-right: 5rem;
      margin-left: 20rem;
+    text-align: left;
 }
 
 .contact {
     flex: 1;
     margin-right: 20px;
+
+
 }
 
 h1 {
@@ -131,7 +150,7 @@ section {
     flex-flow: row wrap;
     flex: 200px;
 
-    
+
     margin-left: 2rem;
 }
 
@@ -142,17 +161,19 @@ article {
 
 img {
     border-radius: 8px 8px 8px 8px;
-    padding-left: 3rem;
+    padding-left: 0.5rem;
 }
 
 .content {
   padding: 2rem 10%;
+    padding-left: 15rem;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
 }
 
 .col {
@@ -164,16 +185,18 @@ img {
 }
 
 h2 {
-    padding-left: 3rem;
+    padding-left: 0.5rem;
 }
 
 p {
-    padding-left: 3rem;
+    padding-left: 1rem;
+    max-width: 300px;
 }
 
 i {
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
-.titulo2 {
-    padding-left: 3rem;
+
+.mapa {
+    padding-left: 5rem;
 }
